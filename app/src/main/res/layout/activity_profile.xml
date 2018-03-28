@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.profile.ProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <include layout="@layout/layout_center_profile"/>
+
+        <ProgressBar
+            android:id="@+id/pb_profile"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <!--Bottom Navigation-->
+
+        <include layout="@layout/layout_bottom_navigation_view"/>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
