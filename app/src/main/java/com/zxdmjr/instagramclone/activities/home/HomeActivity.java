@@ -8,9 +8,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+import com.nostra13.universalimageloader.core.ImageLoader;
 import com.zxdmjr.instagramclone.R;
 import com.zxdmjr.instagramclone.adapters.SectionsPagerAdapter;
 import com.zxdmjr.instagramclone.utils.BottomNavigationViewHelper;
+import com.zxdmjr.instagramclone.utils.UniversalImageLoader;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -33,10 +35,17 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        initImageLoader();
+
         ButterKnife.bind(this);
 
         setupBottomNavigationView();
         setupViewPager();
+    }
+
+    private void initImageLoader(){
+        UniversalImageLoader loader = new UniversalImageLoader(HomeActivity.this);
+        ImageLoader.getInstance().init(loader.getConfig());
     }
 
 
